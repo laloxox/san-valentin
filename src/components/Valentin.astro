@@ -1,0 +1,99 @@
+---
+// src/pages/valentine.astro
+const { name = 'Amor' } = Astro.props;
+const url = new URL(Astro.request.url);
+const userName = url.searchParams.get('name') || '❤️';
+---
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para {userName}</title>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-rose-500 via-pink-300 to-purple-500 flex items-center justify-center">
+    <main class="text-center px-4">
+        <!-- Contenido principal -->
+        <div class="animate-fade-in-up">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-8">
+                Para {userName}
+            </h1>
+            
+            <!-- Corazón animado -->
+            <div class="heart-pulse animate-pulse-slow mx-auto my-8">
+                ❤️
+            </div>
+            
+            <!-- Mensaje -->
+            <div class="bg-white/20 backdrop-blur-lg rounded-2xl p-8 max-w-2xl mx-auto shadow-xl">
+                <p class="text-xl md:text-2xl text-white leading-relaxed">
+                    En este día especial, quería decirte que...<br>
+                    ¡Eres lo más increíble que me ha pasado! 😊<br>
+                    Gracias por ser mi compañer{userName.endsWith('a') ? 'a' : 'o'} de aventuras.
+                </p>
+                
+                <!-- Botón interactivo -->
+                <button id="surpriseBtn" class="mt-8 px-8 py-3 bg-rose-600 hover:bg-rose-700 text-white rounded-full transition-all transform hover:scale-105">
+                    ¡Haz clic para magia! ✨
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Animaciones personalizadas -->
+    <style>
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .animate-pulse-slow {
+            animation: pulse-slow 2s ease-in-out infinite;
+        }
+
+        .heart-pulse {
+            font-size: 4rem;
+            text-shadow: 0 0 20px rgba(255, 50, 50, 0.5);
+        }
+
+        #surpriseBtn:active {
+            animation: heartExplosion 0.5s ease-out;
+        }
+
+        @keyframes heartExplosion {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.9); }
+            100% { transform: scale(1); }
+        }
+    </style>
+
+    <!-- Script para personalización -->
+    <script>
+        // Efecto al hacer clic en el botón
+        document.getElementById('surpriseBtn').addEventListener('click', () => {
+            const hearts = ['❤️', '💖', '💝', '💘', '💞'];
+            for(let i = 0; i < 50; i++) {
+                const heart = document.createElement('div');
+                heart.style.position = 'fixed';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animation = `fall ${Math.random() * 3 + 2}s linear`;
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                document.body.appendChild(heart);
+            }
+        });
+
+        // Animación de caída de corazones
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                to {
+                    transform: translateY(100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
