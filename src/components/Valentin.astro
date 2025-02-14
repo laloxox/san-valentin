@@ -1,13 +1,13 @@
 ---
 // src/pages/valentine.astro
-const { name = 'Amor' } = Astro.props;
+const { name = 'Todos' } = Astro.props;
 const url = new URL(Astro.request.url);
 const userName = url.searchParams.get('name') || '❤️';
 ---
 
 
 
-<body class="min-h-screen bg-gradient-to-br from-rose-500 via-pink-300 to-purple-500 flex items-center justify-center">
+<body class="min-h-screen bg-gradient-to-r from-fuchsia-500 to-cyan-500 flex items-center justify-center">
     <main class="text-center px-4">
         <!-- Contenido principal -->
         <div class="animate-fade-in-up">
@@ -21,23 +21,139 @@ const userName = url.searchParams.get('name') || '❤️';
             </div>
             
             <!-- Mensaje -->
-            <div class="bg-white/20 backdrop-blur-lg rounded-2xl p-8 max-w-2xl mx-auto shadow-xl">
-                <p class="text-xl md:text-2xl text-white leading-relaxed">
-                    En este día especial, quería decirte que...<br>
-                    ¡Eres lo más increíble que me ha pasado! 😊<br>
-                    Gracias por ser mi compañer{userName.endsWith('a') ? 'a' : 'o'} de aventuras.
+            <div class="bg-white/20 bg-opacity-10 backdrop-filter backdrop-blur-xl rounded-2xl p-8 max-w-3xl mx-auto shadow-2xl">
+                <p class="text-xl md:text-2xl text-white leading-relaxed text-balance">
+                    En este día especial 🌞✨ , quería aprovechar para decirte que...<br>
+                    ¡Eres una persona muy valiosa para mi! 😊<br>
+                    No te rindas. Sigue adelante. ¡Tú puedes! 💪🏼🚀<br>
                 </p>
                 
                 <!-- Botón interactivo -->
-                <button id="surpriseBtn" class="mt-8 px-8 py-3 bg-rose-600 hover:bg-rose-700 text-white rounded-full transition-all transform hover:scale-105">
-                    ¡Haz clic para magia! ✨
+                <button id="surpriseBtn" class="rgb-button mt-8 px-8 py-3 bg-rose-600 hover:bg-rose-700 text-white rounded-full transition-all transform hover:scale-105">
+                    ¡Haz clic y mira la magia! ✨
                 </button>
             </div>
+        </div>
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <img
+            class="absolute w-14 h-14 transition-all duration-1000 animate-float opacity-75 dark:opacity-100 dark:brightness-100 hover:opacity-100"
+            style="animation-delay: 0.2s; top: 5%; left: 5%;"
+            src="/corazon-3d-1.png"
+            alt="AI Icon"
+            />
+            <img
+            class="absolute w-10 h-10 transition-all duration-1000 animate-float opacity-75 dark:opacity-100 dark:brightness-100 hover:opacity-100"
+            style="animation-delay: 0.2s; top: 15%; left: 25%;"
+            src="/corazon-3d-1.png"
+            alt="AI Icon"
+            />
+            <img
+            class="absolute w-5 h-5 transition-all duration-1000 animate-float opacity-75 dark:opacity-100 dark:brightness-100 hover:opacity-100"
+            style="animation-delay: 0.2s; top: 25%; left: 18%;"
+            src="/corazon-3d-2.png"
+            alt="AI Icon"
+            />
+            <img
+            class="absolute w-18 h-18 transition-all duration-1000 animate-float opacity-75 dark:opacity-100 dark:brightness-125 hover:opacity-100"
+            style="animation-delay: 0.6s; top: 8%; right: 5%;"
+            src="/corazon-3d-2.png"
+            alt="AI Icon"
+            />
+            <img
+            class="absolute w-6 h-6 transition-all duration-1000 animate-float opacity-75 dark:opacity-100 dark:brightness-125 hover:opacity-100"
+            style="animation-delay: 0.6s; top: 15%; right: 23%;"
+            src="/corazon-3d-1.png"
+            alt="AI Icon"
+            />
+            <img
+            class="absolute w-10 h-10 transition-all duration-1000 animate-float opacity-75 dark:opacity-100 dark:brightness-125 hover:opacity-100"
+            style="animation-delay: 0.6s; top: 24%; right: 30%;"
+            src="/corazon-3d-dorado.png"
+            alt="AI Icon"
+            />
+            <img
+            class="absolute w-28 h-28 transition-all duration-1000 animate-float opacity-75 dark:opacity-100 dark:brightness-100 hover:opacity-100 min-[320px]:invisible  min-[220px]:invisible  min-[410px]:visible"
+            style="animation-delay: 0.8s; top: 40%; left: 15%;"
+            src="/corazon-3d-dorado.png"
+            alt="AI Icon"
+            />
+            <img
+            class="absolute w-22 h-22 transition-all duration-1000 animate-float opacity-75 dark:opacity-100 dark:brightness-100 hover:opacity-100  min-[320px]:invisible  min-[220px]:invisible  min-[410px]:visible"
+            style="animation-delay: 1.2s; top: 55%; right: 10%;"
+            src="/corazon-3d-1.png"
+            alt="AI Icon"
+            />
+            <img
+            class="absolute w-19 h-19 transition-all duration-1000 animate-float opacity-75 dark:opacity-100 dark:brightness-125 hover:opacity-100"
+            style="animation-delay: 1.4s; top: 85%; left: 5%;"
+            src="/corazon-3d-1.png"
+            alt="AI Icon"
+            />
+            <img
+            class="absolute w-9 h-9 transition-all duration-1000 animate-float opacity-75 dark:opacity-100 dark:brightness-125 hover:opacity-100"
+            style="animation-delay: 1.4s; top: 79%; left: 25%;"
+            src="/corazon-3d-1.png"
+            alt="AI Icon"
+            />
+            <img
+            class="absolute w-7 h-7 transition-all duration-1000 animate-float opacity-75 dark:opacity-100 dark:brightness-125 hover:opacity-100"
+            style="animation-delay: 1.4s; top: 84%; left: 47%;"
+            src="/corazon-3d-dorado.png"
+            alt="AI Icon"
+            />
+            <img
+            class="absolute w-37 h-37 transition-all duration-1000 animate-float opacity-75 dark:opacity-100 dark:brightness-100 hover:opacity-100"
+            style="animation-delay: 1.8s; top: 85%; right: 5%;"
+            src="/corazon-3d-dorado.png"
+            alt="AI Icon"
+            />
+            <img
+            class="absolute w-9 h-9 transition-all duration-1000 animate-float opacity-75 dark:opacity-100 dark:brightness-100 hover:opacity-100 hidden md:block"
+            style="animation-delay: 2.0s; top: 25%; left: 30%;"
+            src="/corazon-3d-1.png"
+            alt="AI Icon"
+            />
+            <img
+            class="absolute w-8 h-8 transition-all duration-1000 animate-float opacity-75 dark:opacity-100 dark:brightness-100 hover:opacity-100 hidden md:block"
+            style="animation-delay: 2.0s; top: 35%; left: 20%;"
+            src="/corazon-3d-1.png"
+            alt="AI Icon"
+            />
+            <img
+            class="absolute w-18 h-18 transition-all duration-1000 animate-float opacity-75 dark:opacity-100 hover:opacity-100 dark:brightness-100 hidden md:block"
+            style="animation-delay: 2.2s; top: 65%; right: 30%;"
+            src="/corazon-3d-dorado.png"
+            alt="AI Icon"
+            />
         </div>
     </main>
 
     <!-- Animaciones personalizadas -->
-    <style>
+    
+
+<style>
+@tailwind utilities;
+
+@keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    .animate-float {
+        animation: float 5s ease-in-out infinite;
+    }
+
+
+
         @keyframes pulse-slow {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.1); }
@@ -67,14 +183,18 @@ const userName = url.searchParams.get('name') || '❤️';
     <script>
         // Efecto al hacer clic en el botón
         document.getElementById('surpriseBtn').addEventListener('click', () => {
-            const hearts = ['❤️', '💖', '💝', '💘', '💞'];
+            const hearts = ['❤️', '💖', '💝', '💘','🌟','💗','😗', '💞', '🔥', '⭐', '💜', '🤍', '🙌', '✨', '🙈' ];
             for(let i = 0; i < 50; i++) {
                 const heart = document.createElement('div');
-                heart.style.position = 'fixed';
+                heart.style.position = 'absolute';
                 heart.style.left = Math.random() * 100 + 'vw';
                 heart.style.animation = `fall ${Math.random() * 3 + 2}s linear`;
                 heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
                 document.body.appendChild(heart);
+
+                heart.addEventListener('animationend', () => {
+                    heart.remove();
+                });
             }
         });
 
@@ -82,12 +202,39 @@ const userName = url.searchParams.get('name') || '❤️';
         const style = document.createElement('style');
         style.textContent = `
             @keyframes fall {
-                to {
+            0% {
+                    transform: translateY(-100vh) rotate(0deg);
+                    opacity: 70;
+                }
+            100% {
                     transform: translateY(100vh) rotate(360deg);
-                    opacity: 0;
+                    opacity: 20;
                 }
             }
         `;
         document.head.appendChild(style);
+
     </script>
 </body>
+
+
+<style>
+    .rgb-button {
+        background-image: linear-gradient(45deg, rgb(250, 18, 18),  rgb(156, 62, 185), rgb(221, 79, 197));
+        background-size: 600% 100%;
+        animation: gradient 6s ease infinite;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+            }
+        }
+</style>
